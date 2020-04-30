@@ -1,0 +1,25 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ticket ID</th>
+      <th scope="col">priority</th>
+      <th scope="col">Submitted Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ticket of tickets">
+      <th scope="row">{{ticket.ticketId}}</th>
+      <td>{{ticket.status}}</td>
+      <td>{{ticket.priority}}</td>
+      <td>{{ticket.datecreated | date}}</td>
+      <td><button class="btn btn-danger" (click)="editTicket(ticket)"> Edit Ticket</button></td>
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
